@@ -1,16 +1,15 @@
 import type { Metadata } from "next"
-import GameSetup from "@/components/game-setup"
+import GameBoard from "@/components/game-board"
 
 export const metadata: Metadata = {
-  title: "RAMI Score Tracker",
+  title: "RAMI Game | Playing",
   description: "Track scores for your custom RAMI card game",
 }
 
-export default function Home() {
+export default function GamePage() {
   return (
     <main className="container max-w-md mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-6">RAMI Score Tracker</h1>
-      <GameSetup />
+      <GameBoard />
     </main>
   )
 }
