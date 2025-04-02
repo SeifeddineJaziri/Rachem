@@ -34,6 +34,7 @@ export default function ScoreHistory({ history, players }: ScoreHistoryProps) {
           <table className="history-table">
             <thead>
               <tr>
+                <th>Round</th>
                 {players.map((player) => (
                   <th key={player.name}>{player.name}</th>
                 ))}
@@ -42,6 +43,7 @@ export default function ScoreHistory({ history, players }: ScoreHistoryProps) {
             <tbody>
               {history.map((round) => (
                 <tr key={round.round}>
+                  <td className="round-number">{round.round}</td>
                   {players.map((player) => {
                     const playerScore = round.scores.find((s) => s.playerName === player.name)
                     return (
@@ -73,3 +75,4 @@ export default function ScoreHistory({ history, players }: ScoreHistoryProps) {
     </div>
   )
 }
+
